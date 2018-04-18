@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpinnerBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eA6-Rh-L9b">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BnU-dj-kYp">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Eh4-Uc-NDS">
+                                        <rect key="frame" x="168" y="304" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7Kd-F8-Td2"/>
+                                            <constraint firstAttribute="width" constant="40" id="gxQ-te-eDW"/>
+                                        </constraints>
+                                        <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BnU-dj-kYp" secondAttribute="trailing" id="2KO-JG-nMv"/>
+                                    <constraint firstItem="BnU-dj-kYp" firstAttribute="width" secondItem="eA6-Rh-L9b" secondAttribute="width" id="3ZR-jh-eLv"/>
+                                    <constraint firstItem="Eh4-Uc-NDS" firstAttribute="centerY" secondItem="eA6-Rh-L9b" secondAttribute="centerY" id="7yB-lj-Lng"/>
+                                    <constraint firstItem="BnU-dj-kYp" firstAttribute="leading" secondItem="eA6-Rh-L9b" secondAttribute="leading" id="ScZ-FQ-Ids"/>
+                                    <constraint firstItem="BnU-dj-kYp" firstAttribute="top" secondItem="eA6-Rh-L9b" secondAttribute="top" id="UJO-D7-Vo6"/>
+                                    <constraint firstAttribute="bottom" secondItem="BnU-dj-kYp" secondAttribute="bottom" id="e1u-BR-GQh"/>
+                                    <constraint firstItem="BnU-dj-kYp" firstAttribute="height" secondItem="eA6-Rh-L9b" secondAttribute="height" id="nZR-OM-L8g"/>
+                                    <constraint firstItem="Eh4-Uc-NDS" firstAttribute="centerX" secondItem="eA6-Rh-L9b" secondAttribute="centerX" id="nwJ-nV-Kmh"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eA6-Rh-L9b" secondAttribute="bottom" id="7Jx-Ul-s7s"/>
+                            <constraint firstItem="eA6-Rh-L9b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hSH-19-V4Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eA6-Rh-L9b" secondAttribute="trailing" id="kTc-gT-yIb"/>
+                            <constraint firstItem="eA6-Rh-L9b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rWH-TX-5oE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="BnU-dj-kYp" id="Vbu-qM-SId"/>
+                        <outlet property="scrollView" destination="eA6-Rh-L9b" id="ewb-Et-1Um"/>
+                        <outlet property="spinner" destination="Eh4-Uc-NDS" id="C0N-Pm-iWC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
